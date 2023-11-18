@@ -11,7 +11,7 @@ namespace CodeKata
 
     internal class _1
     {
-        public int Solution(int num1, int num2)
+        static public int Solution(int num1, int num2)
         {
             int answer = 0;
 

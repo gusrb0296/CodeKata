@@ -8,7 +8,7 @@ namespace CodeKata
 {
     internal class _2
     {
-        public int solution(int num1, int num2)
+        static public int Solution(int num1, int num2)
         {
             int answer = 0;
             
