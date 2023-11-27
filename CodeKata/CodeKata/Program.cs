@@ -4,12 +4,23 @@
     {
         static void Main(string[] args)
         {
-            int answer = 0;
+            //int answer = 0;
+            int n = 5;
+            long[] answer = new long[n];
+            int x = 2;
+            
+            int temp = x;
+            for (int i = 0; i < n; i++)
+            {
+                answer[i] = x;
+                x += temp;
+            }
 
-            _05 _05 = new _05();
+            foreach (var a in answer)
+            {
+                Console.WriteLine(a);
+            }
 
-            answer = _05.solution(1, 1);
-            Console.WriteLine(answer);
         }
     }
 }
