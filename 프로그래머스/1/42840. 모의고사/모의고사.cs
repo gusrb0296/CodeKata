@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 public class Solution {
     public List<int> solution(int[] answers) {
@@ -28,13 +29,7 @@ public class Solution {
             }
         }
         
-        for(int i = 0; i < 3; i++) 
-        { 
-            if(max < board[i]) 
-            {
-                max= board[i]; 
-            } 
-        }
+        max = board.Max();
         
         for(int i = 0; i < 3; i++) 
         { 
