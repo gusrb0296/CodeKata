@@ -1,33 +1,30 @@
-class Program
+internal class Program
 {
     static void Main(string[] args)
     {
         List<int> nums = new List<int>();
 
         int sum = 0;
+        int min = int.MaxValue;
 
         for (int i = 0; i < 7; i++)
         {
             nums.Add(int.Parse(Console.ReadLine()));
-        }
-
-        List<int> oddNumbers = new List<int>();
-
-        foreach (int num in nums)
-        {
-            if (num % 2 != 0)
+            if (nums[i] % 2 != 0)
             {
-                oddNumbers.Add(num);
+                sum += nums[i];
+
+                if (nums[i] < min)
+                {
+                    min = nums[i];
+                }
             }
         }
-
-        sum = oddNumbers.Sum();
-        oddNumbers.Sort();
 
         if (sum != 0)
         {
             Console.WriteLine(sum);
-            Console.WriteLine(oddNumbers[0]);
+            Console.WriteLine(min);
         }
         else
         {
