@@ -1,33 +1,33 @@
+using System.Text;
+
 class Program
 {
     static void Main(string[] args)
     {
         string[] input = Console.ReadLine().Split();
+        long a, b;
+        a = long.Parse(input[0]);
+        b = long.Parse(input[1]);
 
-        long[] nums = new long[2];
-        for(int i = 0; i < input.Length; i++)
+        if (a > b)
         {
-            nums[i] = long.Parse(input[i]);
+            (a, b) = (b, a);
         }
-        
-        if (nums[0] > nums[1])
+
+        StringBuilder builder = new StringBuilder();
+
+        if (a == b || b - a == 1)
         {
-            (nums[1], nums[0]) = (nums[0], nums[1]);
-        }
-        
-        if(nums[0] == nums[1] || nums[1] - nums[0] == 1)
-        {
-            Console.Write("0");
+            Console.WriteLine("0");
         }
         else
         {
-            Console.WriteLine(nums[1] - nums[0] -1);
-        
-
-            for(long i= nums[0]+1; i < nums[1]; i++)
+            Console.WriteLine(b - a - 1);
+            for (long i = a + 1; i < b; i++)
             {
-                Console.Write($"{i} ");
-            }    
+                builder.Append($"{i} ");
+            }
+            Console.Write(builder.ToString());
         }
     }
 }
