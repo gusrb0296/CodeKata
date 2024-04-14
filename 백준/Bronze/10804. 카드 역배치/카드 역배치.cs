@@ -11,12 +11,7 @@ class Program
             string[] parts = input.Split();
             numberPairs[i, 0] = int.Parse(parts[0]);
             numberPairs[i, 1] = int.Parse(parts[1]);
-            
-            if(numberPairs[i, 0] > numberPairs[i, 1])
-            {
-                (numberPairs[i, 0], numberPairs[i, 1]) = (numberPairs[i, 1], numberPairs[i, 0]);
-            }
-            
+                        
             Array.Reverse(cards, numberPairs[i, 0]-1, numberPairs[i, 1] - numberPairs[i, 0] + 1);
         }
 
